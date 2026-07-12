@@ -22,8 +22,8 @@ Source files for the DBA Craft blog series.
 
 | Host | Role |
 |------|------|
-| `iam.dbacraft.com` | Identity server — OpenLDAP, phpLDAPadmin |
-| `db1.dbacraft.com` | Database server — PostgreSQL, MongoDB, MySQL, MariaDB |
+| `iam.dbacraft.com` | Identity server - OpenLDAP, phpLDAPadmin |
+| `db1.dbacraft.com` | Database server - PostgreSQL, MongoDB, MySQL, MariaDB |
 
 ## License
 
