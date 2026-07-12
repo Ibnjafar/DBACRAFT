@@ -1,0 +1,72 @@
+# Series : Centralized DB Authentication in the Wild
+# Part   : 2 - Building an Enterprise LDAP Directory with OpenLDAP
+# File   : 08-groups.ldif
+# Purpose: Create authorization groups under ou=groups
+# Load   : ldapadd -x -D "cn=admin,dc=dbacraft,dc=com" -W -f 08-groups.ldif
+
+# ---------------------------------------------------------------
+# db-admins: Maps to the db-admins role in PostgreSQL, MongoDB,
+#            MySQL and MariaDB
+# ---------------------------------------------------------------
+dn: cn=db-admins,ou=groups,dc=dbacraft,dc=com
+objectClass: groupOfNames
+cn: db-admins
+member: uid=user_ahmad_dba,ou=people,dc=dbacraft,dc=com
+member: uid=user_siti_dba,ou=people,dc=dbacraft,dc=com
+member: uid=user_wei_dba,ou=people,dc=dbacraft,dc=com
+member: uid=user_priya_dba,ou=people,dc=dbacraft,dc=com
+member: uid=user_hafiz_dba,ou=people,dc=dbacraft,dc=com
+member: uid=user_kavitha_dba,ou=people,dc=dbacraft,dc=com
+
+# ---------------------------------------------------------------
+# server-admins: Linux and infrastructure administrators
+# ---------------------------------------------------------------
+dn: cn=server-admins,ou=groups,dc=dbacraft,dc=com
+objectClass: groupOfNames
+cn: server-admins
+member: uid=user_farah_sysadmin,ou=people,dc=dbacraft,dc=com
+member: uid=user_kumar_sysadmin,ou=people,dc=dbacraft,dc=com
+member: uid=user_aisyah_sysadmin,ou=people,dc=dbacraft,dc=com
+member: uid=user_jason_sysadmin,ou=people,dc=dbacraft,dc=com
+member: uid=user_nadia_sysadmin,ou=people,dc=dbacraft,dc=com
+
+# ---------------------------------------------------------------
+# developers: Application developers with read/write schema access
+# ---------------------------------------------------------------
+dn: cn=developers,ou=groups,dc=dbacraft,dc=com
+objectClass: groupOfNames
+cn: developers
+member: uid=user_arif_dev,ou=people,dc=dbacraft,dc=com
+member: uid=user_mei_dev,ou=people,dc=dbacraft,dc=com
+member: uid=user_daniel_dev,ou=people,dc=dbacraft,dc=com
+member: uid=user_ravi_dev,ou=people,dc=dbacraft,dc=com
+member: uid=user_lily_dev,ou=people,dc=dbacraft,dc=com
+
+# ---------------------------------------------------------------
+# bi-users: Reporting and analytics users with read-only access
+# ---------------------------------------------------------------
+dn: cn=bi-users,ou=groups,dc=dbacraft,dc=com
+objectClass: groupOfNames
+cn: bi-users
+member: uid=user_zainab_bi,ou=people,dc=dbacraft,dc=com
+member: uid=user_chong_bi,ou=people,dc=dbacraft,dc=com
+member: uid=user_anita_bi,ou=people,dc=dbacraft,dc=com
+member: uid=user_faiz_bi,ou=people,dc=dbacraft,dc=com
+member: uid=user_preeti_bi,ou=people,dc=dbacraft,dc=com
+
+# ---------------------------------------------------------------
+# service-accounts: Application and automation service accounts
+# ---------------------------------------------------------------
+dn: cn=service-accounts,ou=groups,dc=dbacraft,dc=com
+objectClass: groupOfNames
+cn: service-accounts
+member: uid=svc_billing_ro,ou=people,dc=dbacraft,dc=com
+member: uid=svc_orders_ro,ou=people,dc=dbacraft,dc=com
+member: uid=svc_auth_ro,ou=people,dc=dbacraft,dc=com
+member: uid=svc_analytics_ro,ou=people,dc=dbacraft,dc=com
+member: uid=svc_notifications_ro,ou=people,dc=dbacraft,dc=com
+member: uid=svc_payments_ro,ou=people,dc=dbacraft,dc=com
+member: uid=svc_catalog_ro,ou=people,dc=dbacraft,dc=com
+member: uid=svc_inventory_rw,ou=people,dc=dbacraft,dc=com
+member: uid=svc_reporting_ro,ou=people,dc=dbacraft,dc=com
+member: uid=svc_search_rw,ou=people,dc=dbacraft,dc=com

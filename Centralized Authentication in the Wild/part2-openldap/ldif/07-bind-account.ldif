@@ -1,0 +1,17 @@
+# Series : Centralized DB Authentication in the Wild
+# Part   : 2 - Building an Enterprise LDAP Directory with OpenLDAP
+# File   : 07-bind-account.ldif
+# Purpose: Create the dedicated read-only bind account used by all database
+#          platforms (PostgreSQL, MongoDB, MySQL, MariaDB) to search the
+#          directory during user authentication.
+#          This account must NOT be used for any other purpose.
+#          Do not grant it write access or admin privileges.
+# Load   : ldapadd -x -D "cn=admin,dc=dbacraft,dc=com" -W -f 07-bind-account.ldif
+
+dn: uid=svc_ldap_bind_ro,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: svc_ldap_bind_ro
+cn: LDAP Bind Service
+sn: BindRO
+mail: svc-ldap-bind@dbacraft.com
+userPassword: CHANGE_ME

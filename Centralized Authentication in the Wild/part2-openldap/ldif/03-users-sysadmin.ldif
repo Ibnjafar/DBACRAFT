@@ -1,0 +1,45 @@
+# Series : Centralized DB Authentication in the Wild
+# Part   : 2 - Building an Enterprise LDAP Directory with OpenLDAP
+# File   : 03-users-sysadmin.ldif
+# Purpose: Create system administrator accounts under ou=people
+# Load   : ldapadd -x -D "cn=admin,dc=dbacraft,dc=com" -W -f 03-users-sysadmin.ldif
+
+dn: uid=user_farah_sysadmin,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_farah_sysadmin
+cn: Farah
+sn: SysAdmin
+mail: farah@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_kumar_sysadmin,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_kumar_sysadmin
+cn: Kumar
+sn: SysAdmin
+mail: kumar@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_aisyah_sysadmin,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_aisyah_sysadmin
+cn: Aisyah
+sn: SysAdmin
+mail: aisyah@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_jason_sysadmin,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_jason_sysadmin
+cn: Jason
+sn: SysAdmin
+mail: jason@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_nadia_sysadmin,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_nadia_sysadmin
+cn: Nadia
+sn: SysAdmin
+mail: nadia@dbacraft.com
+userPassword: CHANGE_ME

@@ -1,0 +1,45 @@
+# Series : Centralized DB Authentication in the Wild
+# Part   : 2 - Building an Enterprise LDAP Directory with OpenLDAP
+# File   : 04-users-dev.ldif
+# Purpose: Create developer accounts under ou=people
+# Load   : ldapadd -x -D "cn=admin,dc=dbacraft,dc=com" -W -f 04-users-dev.ldif
+
+dn: uid=user_arif_dev,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_arif_dev
+cn: Arif
+sn: Dev
+mail: arif@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_mei_dev,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_mei_dev
+cn: Mei
+sn: Dev
+mail: mei@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_daniel_dev,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_daniel_dev
+cn: Daniel
+sn: Dev
+mail: daniel@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_ravi_dev,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_ravi_dev
+cn: Ravi
+sn: Dev
+mail: ravi@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_lily_dev,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_lily_dev
+cn: Lily
+sn: Dev
+mail: lily@dbacraft.com
+userPassword: CHANGE_ME

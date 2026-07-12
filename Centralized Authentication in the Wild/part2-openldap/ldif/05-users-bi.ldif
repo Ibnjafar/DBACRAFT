@@ -1,0 +1,45 @@
+# Series : Centralized DB Authentication in the Wild
+# Part   : 2 - Building an Enterprise LDAP Directory with OpenLDAP
+# File   : 05-users-bi.ldif
+# Purpose: Create BI and reporting user accounts under ou=people
+# Load   : ldapadd -x -D "cn=admin,dc=dbacraft,dc=com" -W -f 05-users-bi.ldif
+
+dn: uid=user_zainab_bi,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_zainab_bi
+cn: Zainab
+sn: BI
+mail: zainab@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_chong_bi,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_chong_bi
+cn: Chong
+sn: BI
+mail: chong@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_anita_bi,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_anita_bi
+cn: Anita
+sn: BI
+mail: anita@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_faiz_bi,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_faiz_bi
+cn: Faiz
+sn: BI
+mail: faiz@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_preeti_bi,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_preeti_bi
+cn: Preeti
+sn: BI
+mail: preeti@dbacraft.com
+userPassword: CHANGE_ME

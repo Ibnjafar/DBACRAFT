@@ -1,0 +1,13 @@
+# Series : Centralized DB Authentication in the Wild
+# Part   : 2 - Building an Enterprise LDAP Directory with OpenLDAP
+# File   : 01-ou.ldif
+# Purpose: Create organizational units under the base DN
+# Load   : ldapadd -x -D "cn=admin,dc=dbacraft,dc=com" -W -f 01-ou.ldif
+
+dn: ou=people,dc=dbacraft,dc=com
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=dbacraft,dc=com
+objectClass: organizationalUnit
+ou: groups

@@ -1,0 +1,53 @@
+# Series : Centralized DB Authentication in the Wild
+# Part   : 2 - Building an Enterprise LDAP Directory with OpenLDAP
+# File   : 02-users-dba.ldif
+# Purpose: Create DBA user accounts under ou=people
+# Load   : ldapadd -x -D "cn=admin,dc=dbacraft,dc=com" -W -f 02-users-dba.ldif
+
+dn: uid=user_ahmad_dba,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_ahmad_dba
+cn: Ahmad
+sn: DBA
+mail: ahmad@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_siti_dba,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_siti_dba
+cn: Siti
+sn: DBA
+mail: siti@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_wei_dba,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_wei_dba
+cn: Wei
+sn: DBA
+mail: wei@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_priya_dba,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_priya_dba
+cn: Priya
+sn: DBA
+mail: priya@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_hafiz_dba,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_hafiz_dba
+cn: Hafiz
+sn: DBA
+mail: hafiz@dbacraft.com
+userPassword: CHANGE_ME
+
+dn: uid=user_kavitha_dba,ou=people,dc=dbacraft,dc=com
+objectClass: inetOrgPerson
+uid: user_kavitha_dba
+cn: Kavitha
+sn: DBA
+mail: kavitha@dbacraft.com
+userPassword: CHANGE_ME

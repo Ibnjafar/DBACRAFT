@@ -1,0 +1,15 @@
+# Do not commit credentials or local overrides
+*.env
+.env*
+secrets/
+*.secret
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editor noise
+.vscode/
+.idea/
+*.swp
+*.swo
